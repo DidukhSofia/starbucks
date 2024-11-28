@@ -1,0 +1,662 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body {
+    background-image: url("./img/bg.jpg");
+    width: 100%;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 87.58px;
+    letter-spacing: -0.03em;   
+    color: rgba(255, 255, 255, 1); 
+    margin: 17px 0px;
+}
+.title mark {
+    background: linear-gradient(263.46deg, #237249 3.14%, #35C66B 87.2%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.69px;
+    letter-spacing: -0.02em;
+    color: rgba(217, 217, 217, 1); 
+}
+.header {
+    padding: 45px 123px;
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 83px;
+}
+.header__logo {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 37.6px;
+    font-weight: 800;
+    line-height: 41.16px;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    /* Градієнт як фон */
+    background: linear-gradient(263.46deg, #237249 3.14%, #35C66B 87.2%);
+    
+    /* Робимо градієнт видимим лише на тексті */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Забирає основний колір тексту */
+}
+
+.header__items {
+    display: flex;
+    gap: 88px;
+}
+.header__item a {
+    font-family: 'Montserrat';
+    font-size: 19.17px;
+    font-weight: 400;
+    line-height: 23.37px;
+    text-align: left;
+    color: rgba(217, 217, 217, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.hero {
+    position: relative;
+    padding: 10px 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+}
+.hero__main-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 98px;
+
+}
+.hero__text-container {
+    text-align: left;
+}
+
+
+.hero__subtitle {
+    margin: 47px 0px 68px 0px;
+}
+.hero__btn-green {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 639;
+    line-height: 35.15px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+    padding: 20px 71px;
+    border-radius: 40px;
+}
+.hero__btn-black {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35.15px;
+    letter-spacing: -0.03em;
+    color: rgba(217, 217, 217, 1);  
+    background: rgba(18, 21, 23, 1);  
+    border: 1.02px solid;
+
+    border: 0.3px solid white;  
+    padding: 20px 47px;
+    margin-left: 16px;
+    border-radius: 40px;
+    
+}
+.hero__img {
+    width: 453px;
+    transform: translateY(-43px);
+}
+.hero__statistic-box {
+    display: flex;
+    gap: 65px;
+    margin-top: 69px;
+}
+.hero__statistics-number {
+    font-family: 'Montserrat';
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 67.87px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+.hero__statistics-number mark {
+    /* Градієнт як фон */
+    background: linear-gradient(263.46deg, #237249 3.14%, #35C66B 87.2%);
+        
+    /* Робимо градієнт видимим лише на тексті */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Забирає основний колір тексту */
+}
+.hero__statistics-text {
+    line-height: 28.89px;
+    letter-spacing: -0.02em;
+}
+.hero__lines {
+    position: absolute;
+    right: 0px;
+    top: 205px;
+    z-index: -1;
+}
+.hero__have-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(264.52deg, #FFFFFF 4.95%, #E5E5E5 64.19%, #FBFBFB 88.37%);
+}
+.hero__have-item {
+    text-align: center;
+}
+.hero__have-title {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 52.31px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.hero__have-text {
+    font-family: 'Montserrat';
+    font-size: 20.13px;
+    font-weight: 400;
+    line-height: 32.91px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.hero__have {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(264.52deg, #FFFFFF 4.95%, #E5E5E5 64.19%, #FBFBFB 88.37%);
+    gap: 72px;
+    padding: 15px 30px;
+    border-radius: 40px;
+}
+.hero__have-sticker {
+    position: absolute;
+    bottom: calc(100% - 100px);
+    right: calc(100% - 120px);
+}
+.delicious {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 56px 122px 38px 56px;
+    gap: 134px;
+}
+.delicious__bg {
+    position: absolute;
+    right: 0px;
+    top: calc(100% - 609px);
+    z-index: -1;
+}
+.delicious__img {
+    width: 100%;
+}
+
+.delicious__text {
+    margin: 35px 0px;
+}
+
+.products__text-container {
+    display: flex;
+    padding: 0px 421px 0px 125px;
+    gap: 80px;
+    margin-bottom: 45px;
+}
+
+.products__text {
+    transform: translateY(35px);
+}
+.swiper {
+    position: relative;
+    width: 69%;
+    margin: 0px !important;
+}
+.products__slider {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.swiper-card {
+    position: relative;
+    border-radius: 20px; /* Заокруглюємо краї */
+    overflow: hidden; /* Запобігає виходу вмісту за межі заокруглених країв */
+    z-index: 1;
+    background-color: transparent; /* Прозорий фон */
+}
+
+.swiper-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Заокруглюємо краї */
+    padding: 2px; /* Відступ для бордера */
+    background: linear-gradient(132.9deg, #DADADA 9.82%, rgba(218, 218, 218, 0.07) 49.06%, #DADADA 103.78%); /* Градієнт */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий внутрішній контент */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий внутрішній контент */
+    mask-composite: exclude;
+    z-index: -1; /* Псевдоелемент за контентом */
+    pointer-events: none; /* Не заважає клікам */
+}
+.swiper-slide-active .swiper-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Заокруглюємо краї */
+    padding: 2px; /* Відступ для бордера */
+    background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%); /* Змінений градієнт */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий внутрішній контент */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий внутрішній контент */
+    mask-composite: exclude;
+    z-index: -1; /* Псевдоелемент за контентом */
+    pointer-events: none; /* Не заважає клікам */
+}
+
+.swiper__card-title {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 52.31px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 1);    
+}
+.swiper__text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 37px;
+    position: relative;
+    bottom: 30px;
+}
+.swiper-btn-next {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent; /* Фон кнопки */
+    border-radius: 25px; /* Заокруглення країв */
+    z-index: 1;
+    overflow: hidden; /* Запобігає виходу вмісту за межі заокругленої кнопки */
+}
+
+.swiper-btn-next::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px; /* Заокруглюємо псевдоелемент */
+    padding: 2px; /* Товщина градієнтного бордера */
+    background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%); /* Градієнт для бордера */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий центр */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* Фон кнопки всередині залишається прозорим */
+    z-index: -1; /* Псевдоелемент під кнопкою */
+}
+
+.swiper__img {
+    width: 100%;
+}
+.swiper-btn-next img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* Додайте, якщо зображення має заокруглені кути */
+}
+.swiper__price-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.swiper__img-container {
+    height: 310px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper__card-elipse {
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+    border-radius: 50%;
+}
+.swiper__card-price {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 52.31px;
+    letter-spacing: -0.02em;
+    color: rgba(217, 217, 217, 1);    
+}
+.swiper__card-btn {
+    font-family: 'Montserrat';
+    font-size: 17.3px;
+    font-weight: 639;
+    line-height: 25.34px;
+    letter-spacing: -0.02em;
+    color: rgba(217, 217, 217, 1);    
+    background: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+    padding: 13px 20px;
+    border-radius: 40px;
+    margin-top: 15px;
+}
+
+.events {
+    padding: 74px 122px 0px 122px;
+}
+.events__text-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: 40px;
+}
+
+.events__text {
+    transform: translateY(40px);   
+}
+.events__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 стовпців для контролю пропорцій */
+    grid-template-rows: auto; /* Автоматична висота рядків */
+    gap: 20px; /* Відстань між елементами */
+    margin-top: 50px;
+}
+
+.events__item:nth-child(1),
+.events__item:nth-child(2) {
+    grid-column: span 3; /* Перші два елементи займають по 3 стовпці кожен */
+    grid-row: 1;
+}
+
+.events__item:nth-child(3),
+.events__item:nth-child(4),
+.events__item:nth-child(5) {
+    grid-column: span 2; /* Останні три елементи займають по 2 стовпці кожен */
+    grid-row: 2;
+}
+.events__item {
+    position: relative;
+    width: 100%;
+}
+.events__item-content {
+    position: absolute;
+    top: 0px;
+    left: 28px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.events__item-text {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 34.72px;
+    color: rgba(217, 217, 217, 1); 
+    margin-bottom: 15px;
+}
+.events__item-bg {
+    width: 100%;
+}
+.events__item-btn {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 35.15px;
+    letter-spacing: -0.03em;
+    color: rgba(217, 217, 217, 1); 
+    background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%);
+    padding: 19px 49px;
+    border-radius: 45px;
+}
+.contacts {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 67px 120px 55px 120px;
+    align-items: center;
+    gap: 289px;
+}
+.contacts__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+.contacts__contact-text {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42.23px;
+    text-align: left;
+    color: rgba(217, 217, 217, 1); 
+}
+.contacts__lines {
+    position: absolute;
+    right: 0px;
+    top: 235px;
+    z-index: -1;
+}
+.footer {
+    background: rgba(11, 12, 13, 1);
+    padding: 35px 120px;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 37.6px;
+    font-weight: 800;
+    line-height: 41.16px;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    /* Градієнт як фон */
+    background: linear-gradient(263.46deg, #237249 3.14%, #35C66B 87.2%);
+    
+    /* Робимо градієнт видимим лише на тексті */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Забирає основний колір тексту */
+}
+.footer__title {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: rgba(217, 217, 217, 1); 
+}
+.footer__item a {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    letter-spacing: -0.01em;
+    color: rgba(187, 179, 179, 1);
+}
+.footer__btn {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent; /* Фон кнопки */
+    border-radius: 25px; /* Заокруглення країв */
+    z-index: 1;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.footer__btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px; /* Заокруглюємо псевдоелемент */
+    padding: 2px; /* Товщина градієнтного бордера */
+    background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%); /* Градієнт для бордера */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); /* Прозорий центр */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* Фон кнопки всередині залишається прозорим */
+    z-index: -1; /* Псевдоелемент під кнопкою */
+}
+.footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 99px;
+    align-items: center;
+}
+.footer__number {
+    font-family: 'Montserrat';
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31.69px;
+    text-align: left;
+    /* Градієнт як фон */
+    background: linear-gradient(263.46deg, #237249 3.14%, #35C66B 87.2%);
+    
+    /* Робимо градієнт видимим лише на тексті */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Забирає основний колір тексту */
+}
